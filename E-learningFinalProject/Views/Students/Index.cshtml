@@ -1,0 +1,59 @@
+﻿@model IEnumerable<E_learningFinalProject.Models.Student>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentFName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentLName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentDOB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentPhone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentAdd)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentFName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentLName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentDOB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentPhone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentAdd)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.StudentID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.StudentID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.StudentID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
