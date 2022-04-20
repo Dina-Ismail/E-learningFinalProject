@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace E_learningFinalProject.Models
 {
-    public class Role
+    public class EditRoleViewModel
     {
-       [Required]
-       [MaxLength(256)]
-        public string RoleName;
+        public string Id { get; set; }
+       [Required (ErrorMessage ="Role Name is required")]
+        public string RoleName { get; set; }
     }
 }

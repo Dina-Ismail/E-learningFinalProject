@@ -11,7 +11,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace E_learningFinalProject.Controllers
 {
-    [Authorize]
+    [Authorize(Policy = "AdminRolePolicy")]
+    [Authorize(Policy = "OfficeRolePolicy")]
 
     public class StudentSchedulesController : Controller
     {
