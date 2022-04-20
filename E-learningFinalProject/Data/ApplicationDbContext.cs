@@ -25,11 +25,6 @@ namespace E_learningFinalProject.Data
         {
                 
     }
-
-
-
-
-
         public DbSet<E_learningFinalProject.Models.Professor> Professor { get; set; }
     }
 }
